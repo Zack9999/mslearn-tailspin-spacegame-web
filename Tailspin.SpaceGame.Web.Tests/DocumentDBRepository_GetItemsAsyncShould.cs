@@ -30,7 +30,7 @@ namespace Tests
 
         [TestCase("Milky Way")]
         [TestCase("Andromeda")]
-        [TestCase("Pinwheel")]
+        [TestCase("Pinwheal")]
         [TestCase("NGC 1300")]
         [TestCase("Messier 82")]
         public void FetchOnlyRequestedGameRegion(string gameRegion)
