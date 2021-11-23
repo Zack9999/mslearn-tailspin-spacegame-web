@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
@@ -50,6 +50,8 @@ namespace Tests
                 MAX_RESULTS
             );
             IEnumerable<Score> scores = scoresTask.Result;
+
+            Assert.That(scores.Any());
 
             // Verify that each score's game region matches the provided game region.
             Assert.That(scores, Is.All.Matches<Score>(score => score.GameRegion == gameRegion));
